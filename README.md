@@ -22,6 +22,14 @@ Web app: [https://city-bike-app-6c728.web.app/](https://city-bike-app-6c728.web.
 
 ##
 
+### Node app
+
+* Fetches csv files from provided URLs
+* Parses and valides data
+* Sends data to database
+
+##
+
 ### API Endpoints
 
 |                      URL                      	| Method 	|        	| Description                                                                                                                   	|
