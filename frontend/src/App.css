@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  background-color: rgb(156, 255, 255);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper{
+  width: 500px;
+}
+
+th{
+  border-bottom: 1px solid black;
+}
+
+.journeysTable{
+  text-align: justify;
+  width: 500px;
+  
+  
+}
+
+.journeysTable * {
+  margin-right: 3px;
+}
+
+.stationsTable{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  text-align: justify;
+}
+
+#stationListRow:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
+
+#td_click:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
+
+#clickable_th:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,31 @@
+.searchWrapper{
+    display:flex;
+    flex-direction: column;
+}
+
+.searchForm * {
+    margin: 2px;
+}
+
+.searchForm{
+    display: flex;
+    flex-direction: column;
+}
+
+form > label >input{
+    float: right;
+}
+
+form > label{
+    float: left;
+    padding: 3px;
+}
+
+.searchButton{
+    width: 200px;
+    margin: auto;
+}
+
+.searchButton:hover{
+    cursor: pointer;
+}
