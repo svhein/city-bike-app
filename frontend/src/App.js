@@ -12,12 +12,14 @@ function App() {
   const [rowsPerPage, setRowsPerAge] = useState(25);
   const [currentPage, setCurrentPage] = useState(0); 
   const [journeys, setJourneys] = useState([]);
-  const [stations, setStations] = useState([]);
+  const [stations, setStations] = useState([]); 
   const [stationView, setStationView] = useState(null); // Single station view
   const [sortBy, setSortBy] = useState(null);
   //https://city-bike-api-u44xl65y7a-lz.a.run.app
 
   useEffect(() => {
+
+    // calculate which rows to fetch with paramiters provided from pagination
     let start = parseInt(currentPage) * parseInt(rowsPerPage);
     let end = parseInt(currentPage) * parseInt(rowsPerPage) + parseInt(rowsPerPage);
  
@@ -36,6 +38,7 @@ function App() {
 
   }, [currentPage, rowsPerPage])
 
+  // Sort journeys when sortBy hook is changed by on table header click
   useEffect(() => {
     if(sortBy){
       let copy = JSON.parse(JSON.stringify(journeys))
@@ -51,6 +54,7 @@ function App() {
     }
   }, [sortBy])
 
+  // Component for view == 'journeys'
   function Journeys(){
     return(
       <div className = 'journeysTable'>
@@ -78,6 +82,7 @@ function App() {
     )
   }
 
+  // Component for view == 'stations'
   function Stations(){
     return(
     <div className = 'stationsTable'>

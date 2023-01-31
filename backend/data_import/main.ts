@@ -39,7 +39,6 @@ async function fetchData(url: string){
  *  
  * @param data Array of journeys 
  */
-
 const insertData = async(data: Journey[]) => {
     const client = await pool.connect();
 

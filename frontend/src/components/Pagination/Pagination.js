@@ -8,8 +8,8 @@ function Pagination({view, rowsPerPage, currentPage, setCurrentPage, setRowsPerA
     const [maxJourneyPage, setMaxJourneyPage] = useState(Math.floor(journeyAmount / rowsPerPage));
     const [maxStationPage, setMaxStationPage] = useState(Math.floor(stationAmount / rowsPerPage));
 
+    // Fetch station- and journeys amounts to calculate max pagination page
     useEffect(() =>{
-        console.log('fetching amounts')
         const fetchStationAmount= async() => {
             await fetch(`https://city-bike-api-u44xl65y7a-lz.a.run.app/getStations/amount`)
                 .then(result => result.text())

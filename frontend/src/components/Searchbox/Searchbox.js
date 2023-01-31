@@ -89,13 +89,6 @@ function Searchbox({view, setView, stations, setStations, setJourneys}){
             </div>
             {view == 'journeys' ? JourneySearch() : StationSearch()}
         </div>
-
-        // <form>
-        //     <select type='radio' onChange={handleChange}>
-        //         <option value="journeys">Journeys</option>
-        //         <option value="stations">Stations</option>
-        //     </select>
-        // </form>
     )
 
 }

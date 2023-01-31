@@ -5,8 +5,9 @@ function StationView({stationName, setStationView}){
 
     const [data, setData] = useState(null);
 
+    // fetch station data from api
     useEffect(() => {
-        setData(null)
+        setData(null) // set Data hook to null to show loading icon
         const fetchData = async () => {
             console.log('fetching station: ' + stationName)
             await fetch(`https://city-bike-api-u44xl65y7a-lz.a.run.app/station/${stationName}/data`)
@@ -31,6 +32,8 @@ function StationView({stationName, setStationView}){
     }
 
     if(data){
+
+        // parse data from json returned from api
         console.log(data)
         let departureCount = data.departures[0].count;
         let returnCount = data.returns[0].count;
