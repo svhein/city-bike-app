@@ -23,3 +23,9 @@ Web app: [https://city-bike-app-6c728.web.app/](https://city-bike-app-6c728.web.
 | /getStations/amount                           	| GET    	| STRING 	| number of stations in database                                                                                                	|
 | /getStationRows/:start/:end                   	| GET    	| JSON   	| names of stations at range {start} to {end}                                                                                   	|
 | /station/:string/data                         	| GET    	| JSON   	| station data                                                                                                                  	|
+
+### React app
+
+* Contains search functionality, simple pagination and a table
+* Open station view by clicking station name
+* Sort journeys based on duration or distance by clicking table header
