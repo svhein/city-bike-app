@@ -38,6 +38,14 @@ function App() {
 
   }, [currentPage, rowsPerPage])
 
+  function formatTime(seconds_string){
+    let seconds = parseInt(seconds_string);
+    let minutes = Math.floor(seconds / 60);
+    let sec_left = Math.floor(seconds % 60);
+
+    return String(`${minutes} minutes and ${sec_left} seconds`)
+}
+
   // Sort journeys when sortBy hook is changed by on table header click
   useEffect(() => {
     if(sortBy){
@@ -62,7 +70,7 @@ function App() {
             <tr>
               <th>Departure Stasion</th>
               <th>Return Station</th>
-              <th id='clickable_th' onClick={() => setSortBy('distance')}>Distance (km)</th>
+              <th id='clickable_th' onClick={() => setSortBy('distance')}>Distance (m)</th>
               <th id='clickable_th' onClick={() => setSortBy('duration')}>Duration</th>
             </tr>
             {journeys.map(journey => {
@@ -73,7 +81,7 @@ function App() {
                   <td id='td_click' onClick={() => setStationView(<StationView stationName={journey.returnstationname} setStationView={setStationView}/>)}>
                     {journey.returnstationname}</td>
                   <td>{journey.covereddistance}</td>
-                  <td>{journey.duration}</td>
+                  <td style={{textAlign: "center"}}>{formatTime(journey.duration)}</td>
               </tr>
               )
             })}
