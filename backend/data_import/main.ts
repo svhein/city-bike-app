@@ -94,7 +94,7 @@ async function main(){
                 departureStationName: dataRow[3],
                 returnStationId: parseInt(dataRow[4]),
                 returnStationName: dataRow[5],
-                coveredDistance: parseInt(dataRow[6]),
+                coveredDistance: parseInt(dataRow[6]) / 1000,
                 duration: parseInt(dataRow[7])
             }
 
