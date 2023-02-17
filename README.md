@@ -3,7 +3,7 @@
 My pre-assigment solution for [Solita Dev Academy Finland 2023](https://github.com/solita/dev-academy-2023-exercise).
 The object was to create web application that displays journeys made with city bikes in the Helsinki Capital area.
 
-Web app: [https://city-bike-app-6c728.web.app/](https://city-bike-app-6c728.web.app/)
+Web app: [https://city-bike-app-6c728.firebaseapp.com/](https://city-bike-app-6c728.firebaseapp.com/)
 
 ## Solution
 
