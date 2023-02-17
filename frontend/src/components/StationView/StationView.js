@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import './StationView.css';
+import { useNavigate } from 'react-router-dom';
 
 function StationView({stationName, setStationView}){
 
     const [data, setData] = useState(null);
+
+    const navigate = useNavigate();
 
     // fetch station data from api
     useEffect(() => {
@@ -44,9 +47,10 @@ function StationView({stationName, setStationView}){
         let avgDepDistance = data.avgDepDistance[0].avg
         let avgRetDistance = data.avgRetDistance[0].avg
         return (
-        
+        <div className = "stationViewWrapper">
             <div className='stationView'>
-                <h2>{stationName}</h2>
+                <h2 id="backArrow" onClick={() => navigate("/")}><span>&#10229;</span></h2>
+                <h2 style={{textAlign: "center"}}>{stationName}</h2>
                 <div className='topRow'>
                     <div className = 'topDepartures'>
                         <h3>Journeys from here</h3>
@@ -64,7 +68,7 @@ function StationView({stationName, setStationView}){
                        {topReturns.map(station => {
                             return(
                                 // <li>{station.departurestationname} {station.count} trips</li>
-                                <div className = 'top_list_row'  onClick={() => setStationView(<StationView  stationName={station.departurestationname} setStationView={setStationView} />)}>
+                                <div className = 'top_list_row'  onClick={() => setStationView(<StationView stationName={station.departurestationname} setStationView={setStationView} />)}>
                                     <p>{station.departurestationname}</p> <p>{station.count}</p>
                                 </div>
 
@@ -79,8 +83,7 @@ function StationView({stationName, setStationView}){
                 <div className = 'avg_distance'>
                     <p>Avarage journey to this station is <b>{formatDistance(avgRetDistance)} kilometers</b> long and takes  <b>{formatTime(avgRetDuration)} </b></p>
                 </div>
-    
-    
+            </div>
             </div>
         )
     }
