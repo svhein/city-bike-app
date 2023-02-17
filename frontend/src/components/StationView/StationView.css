@@ -1,8 +1,21 @@
 .stationView{
     position: sticky;
     top: 0;
-    width: 400px;
+    width: 440px;
     height: fit-content;
+    background-color:rgb(186, 221, 252);
+    border-radius: 20px;
+    -webkit-box-shadow: 2px 2px 0px 2px #000000; 
+box-shadow: 2px 2px 0px 2px #000000;
+}
+
+.stationViewWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(208, 231, 252);
 }
 
 .topRow{
@@ -21,16 +34,12 @@
 
 
 .top_list_row:hover{
-    background-color: aqua;
+    background-color: rgb(132, 145, 218);
     cursor: pointer;
     border-radius: 10px;
     padding-right: 5px;
 }
 
-.stationView{
-    background-color:rgb(186, 221, 252);
-    border-radius: 20px;
-}
 
 .topDepartures, .topReturns{
     background-color: rgb(240, 248, 255);
@@ -48,4 +57,16 @@
 h5{
     display: flex;
     justify-content: center;
+}
+
+#backArrow{
+    margin-left: 20px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+#backArrow:hover{
+    cursor: pointer;
+    background-color: rgb(70, 130, 184);
+
 }

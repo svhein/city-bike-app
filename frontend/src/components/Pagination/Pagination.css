@@ -34,6 +34,6 @@
   }
 
 .arrowWrapper:hover{
-    background-color: aqua;
+    background-color: rgb(132, 145, 218);
     cursor: pointer;
 }
