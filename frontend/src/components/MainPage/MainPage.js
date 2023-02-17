@@ -84,7 +84,10 @@ function MainPage({ setStationView }) {
                     navigate("/station")
                     }}>
                     {journey.departurestationname}</td>
-                  <td id='td_click' onClick={() => setStationView(<StationView stationName={journey.returnstationname} setStationView={setStationView}/>)}>
+                  <td id='td_click' onClick={() => {
+                    setStationView(<StationView stationName={journey.returnstationname} setStationView={setStationView}/>);
+                    navigate("/station")
+                    }}>
                     {journey.returnstationname}</td>
                   <td>{journey.covereddistance}</td>
                   <td style={{textAlign: "center"}}>{formatTime(journey.duration)}</td>
@@ -93,16 +96,6 @@ function MainPage({ setStationView }) {
             })}
           </table>
         </div>
-    )
-  }
-
-  function MainView(){
-    return (
-      <div className='wrapper'>
-        <Searchbox view={view} setView={setView} stations={stations} setStations={setStations} setJourneys={setJourneys}/>
-        <Pagination view={view} rowsPerPage={rowsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage} setRowsPerAge={setRowsPerAge}/>
-        {view == 'journeys' ? <Journeys /> : Stations()}
-    </div>
     )
   }
 
@@ -116,7 +109,10 @@ function MainPage({ setStationView }) {
         </tr>
         {stations.map(station => {
           return (
-            <tr id='stationListRow' onClick={(() => setStationView(<StationView stationName={station.departurestationname} setStationView={setStationView}/>))}>
+            <tr id='stationListRow' onClick={() => {
+                setStationView(<StationView stationName={station.departurestationname} setStationView={setStationView}/>);
+                navigate("/station");   
+                }}>
               {station.departurestationname}
             </tr>
           )
