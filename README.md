@@ -3,7 +3,12 @@
 My pre-assigment solution for [Solita Dev Academy Finland 2023](https://github.com/solita/dev-academy-2023-exercise).
 The object was to create web application that displays journeys made with city bikes in the Helsinki Capital area.
 
-Web app: [https://city-bike-app-6c728.firebaseapp.com/](https://city-bike-app-6c728.firebaseapp.com/)
+## Screenshots
+<p float="left">
+  <img src="https://github.com/svhein/gif/blob/main/bikeAppEtusivu.JPG?raw=true"  width="400" height="400">
+  <img src="https://github.com/svhein/gif/blob/main/stations.JPG?raw=true"  width="400" height="400">
+  <img src="https://github.com/svhein/gif/blob/main/stationView.JPG"  width="400" height="400">
+</p>
 
 ## Solution
 
